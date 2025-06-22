@@ -1,0 +1,609 @@
+/* التنقل */
+nav {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+/* الصفحة الرئيسية */
+#home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://i.ibb.co/ksKsGScb/image.jpg') center/cover;
+    color: #fff;
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#home p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* قسم الأعضاء */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.member-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.member-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.member-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.member-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.member-info p {
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.social-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.social-link i {
+    margin-left: 5px;
+}
+
+/* قسم الذكريات */
+.memories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.memory-card {
+    position: relative;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.memory-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.memory-card:hover img {
+    transform: scale(1.1);
+}
+
+.memory-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 1rem;
+    color: #fff;
+}
+
+/* قسم أقوى الأعضاء */
+.power-members {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.power-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.member-name {
+    width: 150px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.power-bar-bg {
+    flex-grow: 1;
+    height: 15px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.power-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), #64ffda);
+    border-radius: 10px;
+    width: 0;
+    transition: width 1s ease;
+}
+
+.power-percent {
+    width: 50px;
+    text-align: right;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* قسم الروابط */
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.social-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* الفوتر */
+footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.footer-links li {
+    margin: 0 1rem;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* التجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    #home h1 {
+        font-size: 2rem;
+    }
+    
+    .members-grid, .memories-grid, .social-links {
+        grid-template-columns: 1fr;
+    }
+
+    .power-member {
+        flex-direction: column;
+    }
+
+    .member-name, .power-bar-bg {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}/* التنقل */
+nav {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+/* الصفحة الرئيسية */
+#home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://i.ibb.co/ksKsGScb/image.jpg') center/cover;
+    color: #fff;
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#home p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* قسم الأعضاء */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.member-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.member-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.member-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.member-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.member-info p {
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.social-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.social-link i {
+    margin-left: 5px;
+}
+
+/* قسم الذكريات */
+.memories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.memory-card {
+    position: relative;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.memory-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.memory-card:hover img {
+    transform: scale(1.1);
+}
+
+.memory-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 1rem;
+    color: #fff;
+}
+
+/* قسم أقوى الأعضاء */
+.power-members {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.power-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.member-name {
+    width: 150px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.power-bar-bg {
+    flex-grow: 1;
+    height: 15px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.power-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), #64ffda);
+    border-radius: 10px;
+    width: 0;
+    transition: width 1s ease;
+}
+
+.power-percent {
+    width: 50px;
+    text-align: right;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* قسم الروابط */
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.social-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* الفوتر */
+footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.footer-links li {
+    margin: 0 1rem;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* التجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    #home h1 {
+        font-size: 2rem;
+    }
+    
+    .members-grid, .memories-grid, .social-links {
+        grid-template-columns: 1fr;
+    }
+
+    .power-member {
+        flex-direction: column;
+    }
+
+    .member-name, .power-bar-bg {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}

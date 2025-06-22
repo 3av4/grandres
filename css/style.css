@@ -1,0 +1,43 @@
+/* الأساسيات */
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --primary-color: #e94560;
+    --secondary-color: #1a1a2e;
+    --card-bg: #fff;
+}
+
+body.dark-mode {
+    --bg-color: #1a1a2e;
+    --text-color: #f1f1f1;
+    --primary-color: #64ffda;
+    --secondary-color: #0f3460;
+    --card-bg: #16213e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.section {
+    padding: 5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
